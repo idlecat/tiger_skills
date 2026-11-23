@@ -1,6 +1,6 @@
 ---
-name: zcc-review
-description: Get a read-only second-opinion code review of the current diff from a GLM model (z.ai) through the pi agent (/opt/homebrew/bin/pi), then apply any fixes yourself in this session. Use when the user asks to run "z_cc", "zcc", or wants a GLM / second-model opinion on a change — without granting that model write or shell access to the repo.
+name: pi-review
+description: Get a read-only second-opinion code review of the current diff from a GLM model (z.ai) through the pi agent (/opt/homebrew/bin/pi), then apply any fixes yourself in this session. Use when the user asks for a "pi review", "zcc" or "z_cc" review, or wants a GLM / second-model opinion on a change — without granting that model write or shell access to the repo.
 ---
 
 This skill gets a "second opinion from a different model" by running the pi
@@ -31,7 +31,7 @@ it over as a file.
 2. Set up a per-run log dir and write the diff into it:
 
    ```bash
-   LOG_DIR=~/.claude/zcc-review-logs/$(date -u +%Y%m%dT%H%M%SZ)
+   LOG_DIR=~/.claude/pi-review-logs/$(date -u +%Y%m%dT%H%M%SZ)
    mkdir -p "$LOG_DIR"
    git diff HEAD > "$LOG_DIR/diff.patch"   # or the command chosen in step 1
    ```

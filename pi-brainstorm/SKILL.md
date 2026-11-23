@@ -9,7 +9,7 @@ whole conversation: each side reads the previous version and the other side's
 last diff, makes its changes, and the turn is committed before switching.
 
 pi has no permission system: with `bash` enabled it runs any shell command
-unasked. So, as in `zcc-review`, pi gets **file tools only**
+unasked. So, as in `pi-review`, pi gets **file tools only**
 (`read,ls,grep,find,edit,write`, no `bash`), no extensions, skills or MCP, and
 ignores project-local pi files. pi cannot run git, so **Claude makes pi's
 commit for it** (authored as pi, message written by pi), after checking that pi
