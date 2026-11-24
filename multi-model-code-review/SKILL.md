@@ -1,6 +1,6 @@
 ---
-name: pi-review
-description: Get a read-only second-opinion code review of the current diff from another model through the pi agent (/opt/homebrew/bin/pi) — from Claude Code, or from pi itself as a separate pi session on a different model; default reviewer zai/glm-5.3 (from a GLM pi session, deepseek/deepseek-v4-pro) — then apply any fixes yourself in this session. Use when the user asks for a "pi review", a review "with pi", "with another model" or "with <model>" (GLM, DeepSeek, ...), or a second-model opinion on a change — without granting that model write or shell access to the repo.
+name: multi-model-code-review
+description: Get a read-only second-opinion code review of the current diff from a different model — run as a separate pi session (/opt/homebrew/bin/pi) with read-only file tools, from Claude Code or from pi itself; default reviewer zai/glm-5.3 (from a GLM pi session, deepseek/deepseek-v4-pro) — then apply any fixes yourself in this session. Use when the user asks for a second-model or multi-model review, a review "with another model", "with pi" or "with <model>" (GLM, DeepSeek, ...), or a second opinion on a change — without granting that model write or shell access to the repo.
 ---
 
 This skill gets a **second opinion from a different model**: it runs a
@@ -29,8 +29,8 @@ none does, show the list and ask. Known to work: `zai/glm-5.3`,
 plan). A thinking level can be appended as `:<level>` (e.g.
 `zai/glm-5.3:high`) if asked.
 
-Logs go under `LOG_ROOT`: `~/.claude/pi-review-logs` in Claude Code,
-`~/.pi/agent/pi-review-logs` in pi.
+Logs go under `LOG_ROOT`: `~/.claude/multi-model-code-review-logs` in Claude Code,
+`~/.pi/agent/multi-model-code-review-logs` in pi.
 
 ## The runner and its sandbox
 

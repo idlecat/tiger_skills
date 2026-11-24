@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# One sandboxed pi turn for the pi-brainstorm / pi-design-review / pi-review
+# One sandboxed pi turn for the multi-model-brainstorm / multi-model-design-review / multi-model-code-review
 # skills, from either host (Claude Code or pi). The sandbox lives here only:
 # file tools, no bash, no extensions/skills/prompt templates/MCP, and
 # project-local pi files ignored. Never loosen it.

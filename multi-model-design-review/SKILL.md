@@ -1,9 +1,9 @@
 ---
-name: pi-design-review
-description: Review an implementation plan in turns with another model through the pi agent (/opt/homebrew/bin/pi) — from Claude Code, or from pi itself with a second pi session on a different model. The two sides alternate on one plan doc in the repo — each checks the plan against the actual code (does what it names exist, does each step work, is the order right, what's missing, how is each step verified), fixes the plan in place, records findings by severity, and the turn is committed — until no blockers are left and both sides approve, or a set number of rounds. Use when the user asks for a design review, plan review or implementation-plan review "with pi", "with another model" or "in turns", or wants a plan made ready to implement.
+name: multi-model-design-review
+description: Review an implementation plan in turns with two models — you and a second model run as a separate pi session (/opt/homebrew/bin/pi), from Claude Code or from pi itself. The two sides alternate on one plan doc in the repo — each checks the plan against the actual code (does what it names exist, does each step work, is the order right, what's missing, how is each step verified), fixes the plan in place, records findings by severity, and the turn is committed — until no blockers are left and both sides approve, or a set number of rounds. Use when the user asks for a design review, plan review or implementation-plan review with another model, "with pi", "with <model>" or "in turns", or wants a plan made ready to implement.
 ---
 
-Where `pi-brainstorm` widens a doc (new ideas, bigger picture), this skill
+Where `multi-model-brainstorm` widens a doc (new ideas, bigger picture), this skill
 **narrows a plan until it can be built**. The goal is fixed; the question each
 turn is "if someone implemented exactly this, step by step, what would go
 wrong?" Two models take turns on **one markdown plan doc in the current git
@@ -25,8 +25,8 @@ tools, and make every commit. The **peer** is a separate pi session on
   id without the provider** (`glm-5.3`, `deepseek-v4-pro`).
 
 `SELF` and `PEER` below are those side names. Logs go under `LOG_ROOT`:
-`~/.claude/pi-design-review-logs` in Claude Code,
-`~/.pi/agent/pi-design-review-logs` in pi.
+`~/.claude/multi-model-design-review-logs` in Claude Code,
+`~/.pi/agent/multi-model-design-review-logs` in pi.
 
 ## The runner and its sandbox
 
@@ -117,7 +117,7 @@ Work through the plan **step by step against the code**, not from memory:
 
 **Stay in scope.** Don't add features, polish or "while we're here" work the
 goal doesn't need; move such ideas to a short `## Later` list instead. That's
-`pi-brainstorm`'s job, not this one.
+`multi-model-brainstorm`'s job, not this one.
 
 ## The turn contract (same for both sides)
 

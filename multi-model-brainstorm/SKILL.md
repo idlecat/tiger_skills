@@ -1,6 +1,6 @@
 ---
-name: pi-brainstorm
-description: Brainstorm a document in turns with another model through the pi agent (/opt/homebrew/bin/pi) — from Claude Code, or from pi itself with a second pi session on a different model. The two sides alternate on one doc in the repo — each reviews the previous version and the other side's last change, edits the doc, and the turn is committed — for a set number of rounds or until both sides converge. Use when the user asks to brainstorm, co-write or iterate a doc "with pi", "with another model", or "in turns".
+name: multi-model-brainstorm
+description: Brainstorm a document in turns with two models — you and a second model run as a separate pi session (/opt/homebrew/bin/pi), from Claude Code or from pi itself. The two sides alternate on one doc in the repo — each reviews the previous version and the other side's last change, edits the doc, and the turn is committed — for a set number of rounds or until both sides converge. Use when the user asks to brainstorm, co-write or iterate a doc with another model, "with pi", "with <model>" or "in turns".
 ---
 
 Two models take turns on **one markdown doc in the current git repo**. Every
@@ -23,7 +23,7 @@ own tools, and make every commit. The **peer** is a separate pi session on
   id without the provider** (`glm-5.3`, `deepseek-v4-pro`).
 
 `SELF` and `PEER` below are those side names. Logs go under `LOG_ROOT`:
-`~/.claude/pi-brainstorm-logs` in Claude Code, `~/.pi/agent/pi-brainstorm-logs`
+`~/.claude/multi-model-brainstorm-logs` in Claude Code, `~/.pi/agent/multi-model-brainstorm-logs`
 in pi.
 
 ## The runner and its sandbox
