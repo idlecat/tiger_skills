@@ -10,6 +10,7 @@ immediately.
 | `deep-codebase-review` | ✓ | ✓ |
 | `incremental-review` | — | ✓ |
 | `pi-brainstorm` | ✓ | — |
+| `pi-design-review` | ✓ | — |
 | `pi-review` | ✓ | — |
 
 Link a skill into an agent:
